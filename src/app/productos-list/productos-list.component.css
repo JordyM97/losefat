@@ -1,5 +1,5 @@
 .producto{
-    border: 2px solid red;
+    border: 2px solid rosybrown ;
     border-radius: 12px;
     background-color: #444;
     color: #fff;
@@ -18,8 +18,10 @@
 }
 
 .producto:hover{
+    border: 3px solid rosybrown ;
     color: gray;
-    box-shadow: 2px 2px 3px;
+    box-shadow: 2px 2px 3px rosybrown;
+
 }
 .producto h3{
     font-weight: bolder;

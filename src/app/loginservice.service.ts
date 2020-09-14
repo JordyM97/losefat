@@ -23,6 +23,10 @@ export class LoginserviceService {
   getUserTipo(){
     return this.userTipo;
   }
+  nonrelat(){
+    const non="https://losefat-f27a.restdb.io/rest/paginas";
+    return this._http.get<any>(non);
+  }
   login (userData): any{
 
     this._http.post<any>(this._url, userData).subscribe(

@@ -1,5 +1,73 @@
 <h1>Contactenos</h1>
-<form class="formulario" >
+<form [formGroup]="angForm" novalidate>
+  
+   <div class="form-group">
+      <label>Nombre:</label>
+      <input class="form-control" formControlName="Nombre" type="text">
+  </div>
+  <div *ngIf="angForm.controls['Nombre'].invalid && (angForm.controls['Nombre'].dirty || angForm.controls['Nombre'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['Nombre'].errors.required">
+        Nombre is required.
+      </div>
+  </div>
+  <div class="form-group">
+    <label>Apellido:</label>
+    <input class="form-control" formControlName="Apellido" type="text">
+</div>
+<div *ngIf="angForm.controls['Apellido'].invalid && (angForm.controls['Apellido'].dirty || angForm.controls['Apellido'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['Apellido'].errors.required">
+      Apellido is required.
+    </div>
+</div>
+<div class="form-group">
+  <label>Email:</label>
+  <input class="form-control" formControlName="Email" type="email">
+</div>
+<div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty || angForm.controls['Email'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Email'].errors.required">
+    Email is required.
+  </div>
+</div>
+
+<div class="form-group">
+  <label>Fecha Nacimiento:</label>
+<input type="date" id="start" name="trip-start" formControlName="Nacimiento" >
+</div>
+<div class="form-group">
+  <label>Mensaje:</label>
+  <input class="form-control" formControlName="Mensaje" type="text">
+</div>
+
+<div *ngIf="angForm.controls['Mensaje'].invalid && (angForm.controls['Mensaje'].dirty || angForm.controls['Mensaje'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Mensaje'].errors.required">
+    Mensaje is required.
+  </div>
+</div>
+<p>
+  Género:
+  <input type="radio" id="masculino" formControlName="Sexo" name="Sexo" value="masculino">
+  <label for="masculino">Masculino</label>
+  <input type="radio" id="femenino" name="Sexo" value="femenino">
+  <label for="femenino">Femenino</label>
+</p>
+<p>
+  <label for="Categoria">Categoria:</label>
+  <select id="Categoria" name="Categoria" formControlName="Categoria">
+    <option value="Dudas">Dudas</option>
+    <option value="Dugerencias" selected>Sugerencias</option>
+    <option value="Infocomercial" >Información comercial</option>
+  <option value="Publicidad" >Publicidad</option>
+  </select>
+</p>  
+  <button type="submit"
+      [disabled]="angForm.pristine || angForm.invalid" (click)="sendForm()" class="btn btn-success">
+      Save
+  </button>
+</form>
+<br />
+<p>Form value: {{ angForm.value | json }}</p>
+<p>Form status: {{ angForm.status | json }}</p>
+<!--<form class="formulario" >
   <p>
     <label for="nombres">Nombres:</label>
     <input type="text" id="nombres" name="nombres" required>
@@ -55,3 +123,4 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnWXJ3jI48m4Q1ZynT5Tbe1cg8_634eos&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
+  -->
