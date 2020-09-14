@@ -1,0 +1,26 @@
+.producto{
+    border: 2px solid red;
+    border-radius: 12px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    min-width: 300px;
+}
+.productos{
+    padding: 10px;
+    display: inline-flex ;
+    grid-template-columns: 300px 300px ;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+.producto:hover{
+    color: gray;
+    box-shadow: 2px 2px 3px;
+}
+.producto h3{
+    font-weight: bolder;
+}

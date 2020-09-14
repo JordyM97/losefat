@@ -1,0 +1,8 @@
+.productos{
+    display: inline-flex;
+    
+}
+.producto{
+    min-width: 200px;
+    max-width: 300px;
+}

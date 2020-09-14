@@ -1,0 +1,25 @@
+body{
+    padding-bottom: -4px;
+}
+nav{
+    
+    text-align: right;
+    padding-left: 10px;
+    /**background-color: rgba(131, 131, 126, 0.774) ;**/
+}
+nav a{
+   
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    background-color: rgba(187, 187, 180, 0.774);
+    color: black;
+    text-transform: uppercase;
+}
+nav a:hover{
+    text-shadow:-1px 1px 2px palevioletred ;
+}

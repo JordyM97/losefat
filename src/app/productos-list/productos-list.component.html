@@ -1,0 +1,20 @@
+<h1>
+  Nuestros Productos
+</h1>
+<div id="ctn-bars-search" class="row" data-step="2" data-intro="Este es nuestro buscador, aqui tendras un acceso rapido a la seccion que quieras entrar" >
+  <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+</div>
+<div>
+  <div class="productos" *ngFor="let producto of productos">
+    <div class="producto">
+      <img width="190px" height="190px" src="../../assets/img/pelota.png" alt="">
+      <h3>{{producto.Nombre}}</h3>
+      <p>{{producto.Categoria}}</p>
+      <p>{{producto.Costo}}</p>
+      <p>{{producto.Stock}}</p>
+    </div>
+    
+
+  </div>
+
+</div>
