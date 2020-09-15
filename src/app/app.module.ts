@@ -14,11 +14,13 @@ import { PieComponent } from './pie/pie.component';
 import { ScatterComponent } from './scatter/scatter.component';
 import { ProductoDetailComponent } from './producto-detail/producto-detail.component';
 import { ReporteComponent } from './reporte/reporte.component';
+import { NewsComponent } from './news/news.component';
+import { NoAccessComponent } from './no-access/no-access.component';
 
 @NgModule({
   declarations: [
     AppComponent,routingComponents, AdminComponent, NotFoundComponent, ProductoadminComponent,ProductoDetailComponent, BarComponent, PieComponent,
-    ScatterComponent,BarComponent,PieComponent,ScatterComponent,
+    ScatterComponent,BarComponent,PieComponent,ScatterComponent, NewsComponent, NoAccessComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,30 @@
-.formulario{
+.main{
+    background-color: rgb(170, 164, 164)
+}
+form{
     text-align: center;
+       
+}
+.mensaje{
+    height: 200px;;
+}
+form div {
+    display:grid ;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+.alert{
+    color: red;
+}
+form div label{
+    padding-right: 80px;
+}
+form div input{
+    padding-left: 20px;
+    border-radius: 12px;
+    height: 30px;
 }
 h1{
     text-align: center;

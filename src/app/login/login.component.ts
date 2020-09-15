@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
              this.router.navigateByUrl('/producto');
            }
          }else{
-
+            console.log(response)
          }
        }
     );

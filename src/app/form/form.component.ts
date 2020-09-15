@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
     });
   }
   sendForm(){
-    
+    this.loginservice.sendform(this.angForm.value).subscribe
   }
 
 }

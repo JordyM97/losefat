@@ -11,7 +11,9 @@ export class AdminComponent implements OnInit {
 
   constructor(private loginservice: LoginserviceService, private router: Router) { }
   public productos = new Array();
+  public paginas = new Array();
   ngOnInit() {
+    
     this.loginservice.getproducts().subscribe(
       result => {
         for(let clave in result){
@@ -25,8 +27,12 @@ export class AdminComponent implements OnInit {
       error =>{ console.log(<any>error);
       }
     )
+
     }
     onDelete(){}
+    getnon(){
+      
+    }
 
 
 }

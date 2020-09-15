@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 import { LoginserviceService } from '../loginservice.service';
 @Component({
@@ -9,7 +12,7 @@ import { LoginserviceService } from '../loginservice.service';
 })
 export class ProductosListComponent implements OnInit {
   public productos = new Array();
-  constructor(private loginservice: LoginserviceService) { }
+  constructor(private loginservice: LoginserviceService,private router: Router) { }
 
   ngOnInit() {
     this.loginservice.getproducts().subscribe(
@@ -22,7 +25,10 @@ export class ProductosListComponent implements OnInit {
           
         }
       },
-      error =>{ console.log(<any>error);
+      error =>{ 
+
+        this.router.navigateByUrl('/noAccess')
+        console.log(<any>error);
       }
     )
   }
