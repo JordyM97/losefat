@@ -38,7 +38,10 @@ export class ProductosListComponent implements OnInit {
       console.log(result);
       
     })
+    this.refresh();
     this.router.navigateByUrl("producto")
   }
-
+  refresh(): void {
+    window.location.reload();
+}
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AppComponent } from './app.component';
+import { CreaarProductoComponent } from './creaar-producto/creaar-producto.component';
 import { FormComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import { NewsComponent } from './news/news.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'producto', component: ProductosListComponent},
   {path: 'producto/', component: ProductoDetailComponent},
   {path: '', component: NewsComponent},
+  {path: 'crear', component: CreaarProductoComponent},
   {path: 'pedidos', component: PedidoListComponent},
   {path: 'pedidos/:id', component: PedidoDetailComponent},
   {path: 'login', component: LoginComponent},

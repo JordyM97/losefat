@@ -1,64 +1,64 @@
-<p>creaar-producto works!</p>
-div class="main">
-  <h1>Register</h1>
+
+<div class="main">
+  <h1>Producto</h1>
 <form [formGroup]="angForm" novalidate>
   <div class="form-group">
-      <label>Cedula:</label>
-      <input class="form-control" formControlName="Cedula" type="text">
-  </div>
-  <div *ngIf="angForm.controls['Cedula'].invalid && (angForm.controls['Cedula'].dirty || angForm.controls['Cedula'].touched)" class="alert alert-danger">
-      <div *ngIf="angForm.controls['Cedula'].errors.required">
-        Cedula is required.
-      </div>
-  </div>
-   <div class="form-group">
       <label>Nombre:</label>
       <input class="form-control" formControlName="Nombre" type="text">
   </div>
   <div *ngIf="angForm.controls['Nombre'].invalid && (angForm.controls['Nombre'].dirty || angForm.controls['Nombre'].touched)" class="alert alert-danger">
       <div *ngIf="angForm.controls['Nombre'].errors.required">
-        Nombre is required.
+        Cedula is required.
+      </div>
+  </div>
+   <div class="form-group">
+      <label>Categoria:</label>
+      <input class="form-control" formControlName="Categoria" type="text">
+  </div>
+  <div *ngIf="angForm.controls['Categoria'].invalid && (angForm.controls['Categoria'].dirty || angForm.controls['Categoria'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['Categoria'].errors.required">
+        Categoria is required.
       </div>
   </div>
   <div class="form-group">
-    <label>Apellido:</label>
-    <input class="form-control" formControlName="Apellido" type="text">
+    <label>Costo:</label>
+    <input class="form-control" formControlName="Costo" type="number">
 </div>
-<div *ngIf="angForm.controls['Apellido'].invalid && (angForm.controls['Apellido'].dirty || angForm.controls['Apellido'].touched)" class="alert alert-danger">
-    <div *ngIf="angForm.controls['Apellido'].errors.required">
-      Apellido is required.
+<div *ngIf="angForm.controls['Costo'].invalid && (angForm.controls['Costo'].dirty || angForm.controls['Costo'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['Costo'].errors.required">
+      Costo is required.
     </div>
 </div>
 <div class="form-group">
-  <label>Email:</label>
-  <input class="form-control" formControlName="Email" type="email">
+  <label>Stock:</label>
+  <input class="form-control" formControlName="Stock" type="number">
 </div>
-<div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty || angForm.controls['Email'].touched)" class="alert alert-danger">
-  <div *ngIf="angForm.controls['Email'].errors.required">
-    Email is required.
+<div *ngIf="angForm.controls['Stock'].invalid && (angForm.controls['Stock'].dirty || angForm.controls['Stock'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Stock'].errors.required">
+    Stock is required.
   </div>
 </div>
 <div class="form-group">
-  <label>Username:</label>
-  <input class="form-control" formControlName="Username" type="text">
+  <label>Img:</label>
+  <input class="form-control" formControlName="Img" type="text">
 </div>
-<div *ngIf="angForm.controls['Username'].invalid && (angForm.controls['Username'].dirty || angForm.controls['Username'].touched)" class="alert alert-danger">
-  <div *ngIf="angForm.controls['Username'].errors.required">
-    Username is required.
+<div *ngIf="angForm.controls['Img'].invalid && (angForm.controls['Img'].dirty || angForm.controls['Img'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Img'].errors.required">
+    Img is required.
   </div>
 </div>
 <div class="form-group">
-  <label>Password:</label>
-  <input class="form-control" formControlName="Password" type="text">
+  <label>CntVentas:</label>
+  <input class="form-control" formControlName="CntVentas" type="text">
 </div>
-<div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class="alert alert-danger">
-  <div *ngIf="angForm.controls['Password'].errors.required">
-    Password is required.
+<div *ngIf="angForm.controls['CntVentas'].invalid && (angForm.controls['CntVentas'].dirty || angForm.controls['CntVentas'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['CntVentas'].errors.required">
+    CntVentas is required.
   </div>
 </div>
   
   <button type="submit"
-      [disabled]="angForm.pristine || angForm.invalid" (click)="signup()" class="btn btn-success">
+      [disabled]="angForm.pristine || angForm.invalid" (click)="createpro()" class="btn btn-success">
       Registrarse
   </button>
 </form>

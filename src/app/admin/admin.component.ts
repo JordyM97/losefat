@@ -40,6 +40,9 @@ export class AdminComponent implements OnInit {
       });
       this.router.navigateByUrl("/admin")
     }
+    nuevo(){
+      this.router.navigateByUrl("/crear")
+    }
 
 
 }

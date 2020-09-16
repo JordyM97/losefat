@@ -18,6 +18,7 @@ export class LoginserviceService {
   sellurl='http://localhost:3000/api/productos/sell';
   deleteproducturl='http://localhost:3000/api/productos/';
   paginasurl='http://localhost:3000/api/visita/';
+  producturl= 'http://localhost:3000/api/productos';
   constructor(private _http: HttpClient) {
     this.userData= {};
     
@@ -170,6 +171,9 @@ export class LoginserviceService {
   }
   sendform(Data: any): any{
     return this._http.post<any>(this.formurl,Data);
+  }
+  createProduct(Data: any): any{
+    return this._http.post<any>(this.producturl,Data)
   }
   
 }

@@ -21,13 +21,19 @@ export class CreaarProductoComponent implements OnInit {
     this.angForm = this.fb.group({
       
        Nombre: ['', Validators.required ],
-       Apellido: ['', Validators.required ],
-       Email: ['', Validators.required ],
-       Birth: ['', Validators.required ],
-       Genero: ['', Validators.required ],
        Categoria: ['', Validators.required ],
-       Mensaje: ['', Validators.required ]
+       Costo: ['', Validators.required ],
+       Stock: ['', Validators.required ],
+       Img: ['', Validators.required ],
+       CntVentas: ['', Validators.required ]
        
     });
+  }
+  createpro(){
+    this.loginservice.createProduct(this.angForm.value).subscribe((response)=>{
+      if(response){
+        this.router.navigateByUrl('admin')
+      }
+    })
   }
 }

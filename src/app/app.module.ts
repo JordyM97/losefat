@@ -21,7 +21,7 @@ import { CreaarProductoComponent } from './creaar-producto/creaar-producto.compo
 @NgModule({
   declarations: [
     AppComponent,routingComponents, AdminComponent, NotFoundComponent, ProductoadminComponent,ProductoDetailComponent, BarComponent, PieComponent,
-    ScatterComponent,BarComponent,PieComponent,ScatterComponent, NewsComponent, NoAccessComponent, CreaarProductoComponent,
+    ScatterComponent,BarComponent,PieComponent,ScatterComponent, NewsComponent,CreaarProductoComponent, NoAccessComponent, CreaarProductoComponent,
   ],
   imports: [
     BrowserModule,

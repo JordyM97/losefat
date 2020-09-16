@@ -21,5 +21,7 @@ export class PedidoListComponent implements OnInit {
       }
     })
   }
-
+  refresh(): void {
+    window.location.reload();
+}
 }
