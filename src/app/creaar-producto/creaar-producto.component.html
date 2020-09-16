@@ -1,0 +1,68 @@
+<p>creaar-producto works!</p>
+div class="main">
+  <h1>Register</h1>
+<form [formGroup]="angForm" novalidate>
+  <div class="form-group">
+      <label>Cedula:</label>
+      <input class="form-control" formControlName="Cedula" type="text">
+  </div>
+  <div *ngIf="angForm.controls['Cedula'].invalid && (angForm.controls['Cedula'].dirty || angForm.controls['Cedula'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['Cedula'].errors.required">
+        Cedula is required.
+      </div>
+  </div>
+   <div class="form-group">
+      <label>Nombre:</label>
+      <input class="form-control" formControlName="Nombre" type="text">
+  </div>
+  <div *ngIf="angForm.controls['Nombre'].invalid && (angForm.controls['Nombre'].dirty || angForm.controls['Nombre'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['Nombre'].errors.required">
+        Nombre is required.
+      </div>
+  </div>
+  <div class="form-group">
+    <label>Apellido:</label>
+    <input class="form-control" formControlName="Apellido" type="text">
+</div>
+<div *ngIf="angForm.controls['Apellido'].invalid && (angForm.controls['Apellido'].dirty || angForm.controls['Apellido'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['Apellido'].errors.required">
+      Apellido is required.
+    </div>
+</div>
+<div class="form-group">
+  <label>Email:</label>
+  <input class="form-control" formControlName="Email" type="email">
+</div>
+<div *ngIf="angForm.controls['Email'].invalid && (angForm.controls['Email'].dirty || angForm.controls['Email'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Email'].errors.required">
+    Email is required.
+  </div>
+</div>
+<div class="form-group">
+  <label>Username:</label>
+  <input class="form-control" formControlName="Username" type="text">
+</div>
+<div *ngIf="angForm.controls['Username'].invalid && (angForm.controls['Username'].dirty || angForm.controls['Username'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Username'].errors.required">
+    Username is required.
+  </div>
+</div>
+<div class="form-group">
+  <label>Password:</label>
+  <input class="form-control" formControlName="Password" type="text">
+</div>
+<div *ngIf="angForm.controls['Password'].invalid && (angForm.controls['Password'].dirty || angForm.controls['Password'].touched)" class="alert alert-danger">
+  <div *ngIf="angForm.controls['Password'].errors.required">
+    Password is required.
+  </div>
+</div>
+  
+  <button type="submit"
+      [disabled]="angForm.pristine || angForm.invalid" (click)="signup()" class="btn btn-success">
+      Registrarse
+  </button>
+</form>
+<br />
+<p>Form value: {{ angForm.value | json }}</p>
+<p>Form status: {{ angForm.status | json }}</p>
+</div>

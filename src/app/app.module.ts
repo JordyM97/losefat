@@ -16,11 +16,12 @@ import { ProductoDetailComponent } from './producto-detail/producto-detail.compo
 import { ReporteComponent } from './reporte/reporte.component';
 import { NewsComponent } from './news/news.component';
 import { NoAccessComponent } from './no-access/no-access.component';
+import { CreaarProductoComponent } from './creaar-producto/creaar-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,routingComponents, AdminComponent, NotFoundComponent, ProductoadminComponent,ProductoDetailComponent, BarComponent, PieComponent,
-    ScatterComponent,BarComponent,PieComponent,ScatterComponent, NewsComponent, NoAccessComponent,
+    ScatterComponent,BarComponent,PieComponent,ScatterComponent, NewsComponent, NoAccessComponent, CreaarProductoComponent,
   ],
   imports: [
     BrowserModule,
