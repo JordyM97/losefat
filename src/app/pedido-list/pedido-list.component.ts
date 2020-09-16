@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginserviceService } from '../loginservice.service';
 
 @Component({
   selector: 'app-pedido-list',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedido-list.component.css']
 })
 export class PedidoListComponent implements OnInit {
-
-  constructor() { }
+  public pedidos= new Array();
+  constructor(private loginservice:LoginserviceService) { }
 
   ngOnInit() {
+    this.loginservice.getpedido().subscribe(response=>{
+      for(let clave in response){
+        if (response.hasOwnProperty(clave)) {
+          this.pedidos.push(response[clave])
+        }
+        console.log(this.pedidos);
+        
+      }
+    })
   }
 
 }

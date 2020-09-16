@@ -1,3 +1,18 @@
 <p>
   producto-detail works!
 </p>
+<div>
+  <div class="productos" *ngFor="let producto of productos"></div>
+    <div class="producto"><!--*ngIf="producto=="-->
+      <p>{{producto.id}}</p>
+      <img width="292px" height="190px" src="{{producto.Img}}" alt="">
+      <h3>{{producto.Nombre}}</h3>
+      <p>{{producto.Categoria}}</p>
+      <p>$ {{producto.Costo}}</p>
+      <p>Solo quedan {{producto.Stock}} !</p>
+      
+      
+    </div>
+    
+
+  </div>

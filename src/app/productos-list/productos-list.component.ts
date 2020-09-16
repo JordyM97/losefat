@@ -32,5 +32,13 @@ export class ProductosListComponent implements OnInit {
       }
     )
   }
+  buyproduct(id:number){
+    console.log(id, typeof(id));   
+    this.loginservice.buyproduct(id).subscribe(result =>{
+      console.log(result);
+      
+    })
+    this.router.navigateByUrl("producto")
+  }
 
 }

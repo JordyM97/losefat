@@ -33,16 +33,12 @@ export class SignupComponent implements OnInit {
     await this.Loginservice.signup(this.angForm.value).subscribe(
       (response)=>{
         if(response){
-          if(response.Tipo=="Admin"){
-            console.log("Admin");
+            console.log("Done");
             this.router.navigateByUrl('/login');
           }else{
-            console.log("Cliente");
+            console.log("Something went wrong");
             this.router.navigateByUrl('/signup');
           }
-        }else{
-
-        }
       }
    );
   }

@@ -1,3 +1,18 @@
 <h1>
   No hay ningun pedido todavia!
 </h1>
+
+<div>
+  <div class="productos" *ngFor="let pedido of pedidos">
+    <div class="pedido">
+      
+      <h3>Compraste {{pedido.Cantidad}}</h3>
+      <p>{{pedido.User}}</p>
+      <p> a $ {{pedido.Precio}}</p>
+      <p>de {{pedido.Producto}} !</p>
+    </div>
+    
+
+  </div>
+
+</div>

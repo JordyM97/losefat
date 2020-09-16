@@ -9,12 +9,14 @@ import { NoAccessComponent } from './no-access/no-access.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PedidoDetailComponent } from './pedido-detail/pedido-detail.component';
 import { PedidoListComponent } from './pedido-list/pedido-list.component';
+import { ProductoDetailComponent } from './producto-detail/producto-detail.component';
 import { ProductosListComponent } from './productos-list/productos-list.component';
 import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
   {path: 'producto', component: ProductosListComponent},
+  {path: 'producto/', component: ProductoDetailComponent},
   {path: '', component: NewsComponent},
   {path: 'pedidos', component: PedidoListComponent},
   {path: 'pedidos/:id', component: PedidoDetailComponent},

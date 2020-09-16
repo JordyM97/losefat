@@ -2,7 +2,7 @@
   Nuestros Productos
 </h1>
 <div id="ctn-bars-search" class="row" data-step="2" data-intro="Este es nuestro buscador, aqui tendras un acceso rapido a la seccion que quieras entrar" >
-  <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+<input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
 </div>
 <div>
   <div class="productos" *ngFor="let producto of productos">
@@ -12,6 +12,7 @@
       <p>{{producto.Categoria}}</p>
       <p>$ {{producto.Costo}}</p>
       <p>Solo quedan {{producto.Stock}} !</p>
+      <button (click)="buyproduct(producto.id)">Comprar Producto</button>
     </div>
     
 

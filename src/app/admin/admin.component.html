@@ -1,5 +1,5 @@
 <h1>
-  Welcome Back, Admin!
+  Welcome Back, Admin {{name}}!
 </h1>
 <h2>Estadisticas</h2>
 <app-bar></app-bar>
@@ -7,6 +7,8 @@
 <app-scatter></app-scatter>
 <h2>Reportes</h2>
 <h2>Productos</h2>
+<button (click)="nuevo()">Nuevo Producto</button>
+<div class="main">
 <div class="productos" *ngFor="let producto of productos">
   
   <div class="producto">
@@ -15,5 +17,8 @@
     <p>{{producto.Categoria}}</p>
     <p>{{producto.Costo}}</p>
     <p>{{producto.Stock}}</p>
-    <a routerLink="/signup" routerLinkActive=""> Registrate</a>>
+    <button> Editar</button>
+    <button (click)="deleteproduct(producto.id)"> Eliminar</button>  
   </div>
+</div>
+</div>

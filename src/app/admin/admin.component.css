@@ -1,8 +1,15 @@
 .productos{
     display: inline-flex;
-    
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px lightpink;
+
 }
 .producto{
+    border: 1px solid black;
+    text-align: center;
     min-width: 200px;
     max-width: 300px;
+}
+.main{
+    background: rgb(240, 239, 236);
 }

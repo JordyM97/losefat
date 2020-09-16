@@ -8,12 +8,13 @@ import { LoginserviceService } from '../loginservice.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
+  public name:string
   constructor(private loginservice: LoginserviceService, private router: Router) { }
+  
   public productos = new Array();
   public paginas = new Array();
   ngOnInit() {
-    
+    this.name=localStorage.getItem("user"),
     this.loginservice.getproducts().subscribe(
       result => {
         for(let clave in result){
@@ -32,6 +33,12 @@ export class AdminComponent implements OnInit {
     onDelete(){}
     getnon(){
       
+    }
+    deleteproduct(id:number){
+      this.loginservice.deleteproduct(id).subscribe(result =>{
+        console.log(result);
+      });
+      this.router.navigateByUrl("/admin")
     }
 
 
