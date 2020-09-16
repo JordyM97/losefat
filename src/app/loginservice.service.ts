@@ -10,7 +10,7 @@ export class LoginserviceService {
   userTipo: any;
   public token: any;
   header: any
-  formurl='http://localhost:3000/api/usuario/login';
+  formurl='http://localhost:3000/api/contacto/';
   _url = 'http://localhost:3000/api/usuario/login';
   post_url ='http://localhost:3000/api/productos';
   signup_url='http://localhost:3000/api/usuario';
@@ -169,7 +169,7 @@ export class LoginserviceService {
 
   }
   sendform(Data: any): any{
-    this._http.post<any>(this.formurl,Data);
+    return this._http.post<any>(this.formurl,Data);
   }
   
 }

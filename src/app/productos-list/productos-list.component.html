@@ -9,9 +9,9 @@
     <div class="producto">
       <img width="292px" height="190px" src="{{producto.Img}}" alt="">
       <h3>{{producto.Nombre}}</h3>
-      <p>{{producto.Categoria}}</p>
-      <p>$ {{producto.Costo}}</p>
-      <p>Solo quedan {{producto.Stock}} !</p>
+      <p class="">{{producto.Categoria}}</p>
+      <p class="precio">$ {{producto.Costo}}</p>
+      <p class="info">Solo quedan {{producto.Stock}} !</p>
       <button (click)="buyproduct(producto.id)">Comprar Producto</button>
     </div>
     

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginserviceService } from '../loginservice.service';
 
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,7 +10,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,private loginservice: LoginserviceService) {this.createForm(); }
+  constructor(private fb: FormBuilder,private loginservice: LoginserviceService,private router:Router) {this.createForm(); }
   angForm: FormGroup;
   ngOnInit() {
     //this.loginservice.nonrelat().subscribe(response=>{
@@ -22,15 +23,25 @@ export class FormComponent implements OnInit {
        Nombre: ['', Validators.required ],
        Apellido: ['', Validators.required ],
        Email: ['', Validators.required ],
-       Mensaje: ['', Validators.required ],
-       Nacimiento: ['', Validators.required ],
-       Sexo: ['', Validators.required ],
-       Categoria: ['', Validators.required ]
+       Birth: ['', Validators.required ],
+       Genero: ['', Validators.required ],
+       Categoria: ['', Validators.required ],
+       Mensaje: ['', Validators.required ]
        
     });
   }
   sendForm(){
-    this.loginservice.sendform(this.angForm.value).subscribe
+    console.log(this.angForm.value)
+    return this.loginservice.sendform(this.angForm.value).subscribe((response)=>{
+      if(response){
+        console.log("Done");
+        this.router.navigateByUrl('/login');
+      }else{
+        console.log("Something went wrong");
+        this.router.navigateByUrl('/signup');
+      }
+      
+    })
   }
 
 }

@@ -1,6 +1,7 @@
 
-<h2>Register</h2>
-
+<div class="top"></div>
+<div class="main">
+  <h1>Register</h1>
 <form [formGroup]="angForm" novalidate>
   <div class="form-group">
       <label>Cedula:</label>
@@ -59,9 +60,10 @@
   
   <button type="submit"
       [disabled]="angForm.pristine || angForm.invalid" (click)="signup()" class="btn btn-success">
-      Save
+      Registrarse
   </button>
 </form>
 <br />
 <p>Form value: {{ angForm.value | json }}</p>
 <p>Form status: {{ angForm.status | json }}</p>
+</div>
